@@ -6,11 +6,16 @@ import Formlist from "./Components/User/Formlist";
 function App() {
   const [usersList, setUsersList] = useState([]);
 
-  const addUserHandler = (Name, Age) => {
+  const addUserHandler = (Name, Age, College) => {
     setUsersList((prevUsersList) => {
       return [
         ...prevUsersList,
-        { name: Name, age: Age, id: Math.random().toString() },
+        {
+          name: Name,
+          age: Age,
+          college: College,
+          id: Math.random().toString(),
+        },
       ];
     });
   };
